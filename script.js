@@ -1,5 +1,5 @@
 const links = {
-  donate: 'https://www.example.com/donate',
+  donate: 'https://sociabuzz.com/lyunarch/tribe',
   privateServer: 'https://www.roblox.com/share?code=b0c38ff86e246d4589b407a941031d0a&type=Server'
 };
 
