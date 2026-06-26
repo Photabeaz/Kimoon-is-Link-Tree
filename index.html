@@ -9,74 +9,7 @@
     <!-- Font Awesome untuk Icon (Discord, YouTube, Instagram dll) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <style>
-        /* --- KUSTOMISASI ANIMASI ADVANCED --- */
-
-        /* 1. Efek Background Gradasi Linear Berjalan */
-        @keyframes gradientBg {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-        .animate-bg-gradient {
-            background-size: 200% 200%;
-            animation: gradientBg 15s ease infinite;
-        }
-
-        /* 2. Animasi Gelombang Cairan (Liquid Wave) */
-        @keyframes liquid {
-            0% { border-radius: 40% 60% 60% 40% / 40% 40% 60% 60%; transform: rotate(0deg); }
-            50% { border-radius: 60% 40% 40% 60% / 60% 60% 40% 40%; transform: rotate(180deg); }
-            100% { border-radius: 40% 60% 60% 40% / 40% 40% 60% 60%; transform: rotate(360deg); }
-        }
-        .animate-liquid-1 {
-            animation: liquid 8s linear infinite;
-        }
-        .animate-liquid-2 {
-            animation: liquid 12s linear infinite reverse;
-        }
-
-        /* 3. Animasi Muncul dari Bawah (Fade In Up) */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        .animate-fade-in-up {
-            opacity: 0; /* Mulai dari hidden sebelum animasi jalan */
-            animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-        }
-        
-        /* Delay untuk masing-masing elemen agar muncul bergantian */
-        .delay-1 { animation-delay: 0.2s; }
-        .delay-2 { animation-delay: 0.4s; }
-        .delay-3 { animation-delay: 0.6s; }
-        .delay-4 { animation-delay: 0.8s; }
-
-        /* 4. Tracing Outline Glow Effect saat Hover */
-        .glow-btn .trace-line {
-            position: absolute;
-            background: linear-gradient(90deg, transparent, #38bdf8, #3b82f6, transparent);
-            transition: all 0.5s ease;
-        }
-        /* Garis Atas */
-        .glow-btn .trace-top { top: 0; left: -100%; width: 100%; height: 2px; }
-        .glow-btn:hover .trace-top { left: 100%; transition: 0.6s linear; }
-        /* Garis Kanan */
-        .glow-btn .trace-right { top: -100%; right: 0; width: 2px; height: 100%; }
-        .glow-btn:hover .trace-right { top: 100%; transition: 0.6s linear; transition-delay: 0.15s; }
-        /* Garis Bawah */
-        .glow-btn .trace-bottom { bottom: 0; right: -100%; width: 100%; height: 2px; }
-        .glow-btn:hover .trace-bottom { right: 100%; transition: 0.6s linear; transition-delay: 0.3s; }
-        /* Garis Kiri */
-        .glow-btn .trace-left { bottom: -100%; left: 0; width: 2px; height: 100%; }
-        .glow-btn:hover .trace-left { bottom: 100%; transition: 0.6s linear; transition-delay: 0.45s; }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body class="bg-gradient-to-tr from-[#020617] via-[#0f172a] to-[#1e1b4b] animate-bg-gradient min-h-screen flex flex-col justify-between text-slate-200 font-sans overflow-x-hidden">
 
@@ -107,7 +40,7 @@
         <div class="w-full space-y-4">
             
             <!-- TOMBOL 1: DISCORD -->
-            <a href="https://www.roblox.com/share?code=b0c38ff86e246d4589b407a941031d0a&type=Server" class="glow-btn animate-fade-in-up delay-2 relative block w-full py-4 bg-slate-900/60 border border-slate-800 rounded-xl overflow-hidden text-center font-semibold tracking-wide text-slate-300 transition-all duration-300 hover:bg-slate-900/90 hover:text-sky-400 hover:scale-[1.02] hover:shadow-[0_0_25px_rgba(56,189,248,0.25)] cursor-pointer">
+            <button type="button" data-link-key="privateServer" class="glow-btn animate-fade-in-up delay-2 relative block w-full py-4 bg-slate-900/60 border border-slate-800 rounded-xl overflow-hidden text-center font-semibold tracking-wide text-slate-300 transition-all duration-300 hover:bg-slate-900/90 hover:text-sky-400 hover:scale-[1.02] hover:shadow-[0_0_25px_rgba(56,189,248,0.25)] cursor-pointer">
                 <!-- Jalur Garis Tracing -->
                 <span class="trace-line trace-top"></span>
                 <span class="trace-line trace-right"></span>
@@ -117,10 +50,10 @@
                 <span class="flex items-center justify-center gap-3 relative z-10">
                     <i class="fab fa-roblox text-xl"></i> Join Private Server Evade
                 </span>
-            </a>
+            </button>
 
             <!-- TOMBOL 2: DONATE -->
-            <a href="#" class="glow-btn animate-fade-in-up delay-3 relative block w-full py-4 bg-slate-900/60 border border-slate-800 rounded-xl overflow-hidden text-center font-semibold tracking-wide text-slate-300 transition-all duration-300 hover:bg-slate-900/90 hover:text-sky-400 hover:scale-[1.02] hover:shadow-[0_0_25px_rgba(56,189,248,0.25)] cursor-pointer">
+            <button type="button" data-link-key="donate" class="glow-btn animate-fade-in-up delay-3 relative block w-full py-4 bg-slate-900/60 border border-slate-800 rounded-xl overflow-hidden text-center font-semibold tracking-wide text-slate-300 transition-all duration-300 hover:bg-slate-900/90 hover:text-sky-400 hover:scale-[1.02] hover:shadow-[0_0_25px_rgba(56,189,248,0.25)] cursor-pointer">
                 <span class="trace-line trace-top"></span>
                 <span class="trace-line trace-right"></span>
                 <span class="trace-line trace-bottom"></span>
@@ -128,7 +61,7 @@
                 <span class="flex items-center justify-center gap-3 relative z-10">
                     <i class="fas fa-heart text-xl text-rose-500"></i> Dukung / Donasi
                 </span>
-            </a>
+            </button>
 
             <!-- TOMBOL 3: YOUTUBE / STREAM PLATFORM -->
             
@@ -148,5 +81,6 @@
         </p>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
