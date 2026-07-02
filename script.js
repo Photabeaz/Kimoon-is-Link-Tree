@@ -1,6 +1,6 @@
 const links = {
   donate: 'https://sociabuzz.com/lyunarch/tribe',
-  privateServer: 'https://www.roblox.com/share?code=1cb253206155394ea4a4041ebb993c97&type=Server'
+  privateServer: 'https://www.roblox.com/share?code=b0c38ff86e246d4589b407a941031d0a&type=Server'
 };
 
 function openLink(key) {
